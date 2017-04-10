@@ -9,3 +9,4 @@ storage/*.key
 .env
 Homestead.yaml
 Homestead.json
+config/oauth-5-laravel.php

@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', "HtCount@show");
+Route::get('/twCallback', "Twitter@twCallback");
+Route::get('/authApp', "Twitter@authApp");
+Route::get('/show10', "Twitter@show10Tweets");
