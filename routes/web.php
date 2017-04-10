@@ -1,17 +1,10 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+//Tweets & Hashtags
+Route::get('/', "Tweets@show"); //Empty form, first screen for user
+Route::get('/show/{screen_name?}/{num_tweets?}/{response_type?}', "Tweets@show"); //endpoint to display information based on parameters
+Route::post('/fetchTweets', "Tweets@fetchTweets"); // Form action
 
-Route::get('/', "HtCount@show");
-Route::get('/twCallback', "Twitter@twCallback");
-Route::get('/authApp', "Twitter@authApp");
-Route::get('/show10', "Twitter@show10Tweets");
+
+//Twitter Auth
+Route::get('/authApp', "Twitter@authApp"); //Twitter API authentication
