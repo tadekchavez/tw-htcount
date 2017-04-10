@@ -1,7 +1,8 @@
 # tw-htcount
 
 Displays 10 (default) tweets from a Twitter account and displays a summary of all the different hashtags in them with the number of repetitions of each one.
-![tw-htcount screenshot](https://github.com/tadekchavez/tw-htcount/blob/master/tw-htcount-screen.png "tw-htcount screenshot')
+
+![tw-htcount screenshot](https://github.com/tadekchavez/tw-htcount/blob/master/tw-htcount-screen.png "tw-htcount screenshot")
 
 ## Installation
 
