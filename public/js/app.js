@@ -43,14 +43,6 @@ update:Ne},Po={create:Re,update:Re},Fo={create:Le,update:Le},qo=u(function(t){va
 
 $(document).ready(function(){
 
-	// $("input").blur(function(){
-	// 	if( $(this).val() != null && $(this).val() != ""){
-	// 		$(this).parent().addClass("input–-filled")
-	// 	}else{
-	// 		$(this).parent().removeClass("input-–filled")
-	// 	}
-	// });
-
 	// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 	if (!String.prototype.trim) {
 		(function() {
@@ -62,7 +54,7 @@ $(document).ready(function(){
 		})();
 	}
 	[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
-		// in case the input is already filled..
+		// input is already filled..
 		if( inputEl.value.trim() !== '' ) {
 			classie.add( inputEl.parentNode, 'input--filled' );
 		}

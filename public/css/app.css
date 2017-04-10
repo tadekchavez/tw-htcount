@@ -49,6 +49,10 @@ body{
 	font-size: 1.3em;
 }
 
+.half-width h2{
+	text-align: center;
+}
+
 .tweet-container{
 	padding: 10px;
 	border-bottom: 1px solid #7dabc5;
@@ -64,8 +68,23 @@ body{
 	background-color: #7dabc5;
 }
 
+#hashtags-wrapper{
+	padding-left: 25px;
+}
 
+#hashtags-wrapper a:link,
+#hashtags-wrapper a:visited{
+  color: #c4d9e4;
+}
+
+#hashtags-wrapper a:hover{
+	color: #feffff;
+}
 
 #usr-input-container{
 	font-size: 150%;
+}
+
+#usr-input-container input{
+	text-align: center;
 }
