@@ -15,6 +15,8 @@ class Twitter extends Controller
     }
 
     /**
+     * Authenticates the application using OAuth
+     * to allow Twitter API request using a bearer token
      * @param  Request
      * @return redirect
      */
@@ -24,7 +26,7 @@ class Twitter extends Controller
 
 		if( ! is_null($token) && ! is_null($verify) )		
 		{
-			// Get token
+			// Get token & saves it on storage (session)
 			$token = $this->tw->requestAccessToken($token, $verify);
 			return redirect("/");
 		}else{
@@ -36,17 +38,6 @@ class Twitter extends Controller
 
 			// return to twitter login url
 			return redirect((string)$url);
-		}
-    }
-
-    public function twCallback( Request $request ){
-    	$token  = $request->get('oauth_token');
-		$verify = $request->get('oauth_verifier');
-
-		if( ! is_null($token) && ! is_null($verify) )		
-		{
-			// Get token
-			$token = $this->tw->requestAccessToken($token, $verify);
 		}
     }
 }
